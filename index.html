@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+    </head>
+    <body>
+    <div id="result"></div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="scripts/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+              $.ajax({
+                 url:"http://www.pathgene.org/mydata.php",
+                 success:function(str){
+                   alert(str);
+                   $("#result").html(str);
+                 }
+              });
+            });
+        </script>
+    </body>
+</html>
