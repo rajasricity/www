@@ -7,6 +7,7 @@
     <author email="sanarajasekhar@gmail.com" href="http://pathgene.org">
         Raja Sekhar
     </author>
+    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
     <icon src="images/icon/icon-72-hdpi.png" width="72" height="72" />
     <icon src="images/icon/icon-48-hdpi.png" width="48" height="48" />
     <icon src="images/icon/icon-36-hdpi.png" width="36" height="36" />
