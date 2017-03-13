@@ -14,9 +14,10 @@
         <script src="scripts/jquery.js"></script>
         <script>
             $(document).ready(function(){
+                var positionOption = { timeout: 500, enableHighAccuracy: true };
                 if(navigator.geolocation){
                   alert("Working");
-                  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+                  navigator.geolocation.getCurrentPosition(successCallback, errorCallback,positionOption);
                 }else{
                   alert("Not Working");
                 }
