@@ -9,6 +9,7 @@
     <body>
         Raja Sekhar Sana 123
     <div id="result"></div>
+    <img id="static-map"/>
         <script type="text/javascript" src="cordova.js"></script>
         <script src="scripts/jquery.js"></script>
         <script>
@@ -18,6 +19,10 @@
                 }else{
                   alert("Not Working");
                 }
+            var mapUrl = "http://maps.google.com/maps/api/staticmap?center=17.3456,78.23456";
+      mapUrl = mapUrl + '&zoom=15&size=512x512&maptype=roadmap&sensor=false';
+      var imgElement = document.getElementById("static-map");
+      imgElement.src = mapUrl;
             });
         </script>
     </body>
