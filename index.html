@@ -16,6 +16,7 @@
             $(document).ready(function(){
                 if(navigator.geolocation){
                   alert("Working");
+                  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
                 }else{
                   alert("Not Working");
                 }
@@ -24,6 +25,11 @@
       var imgElement = document.getElementById("static-map");
       imgElement.src = mapUrl;
             });
+            function successCallback(position) {
+              alert("Inside");
+              alert(position.coords.latitude);
+            }
+            function errorCallback() {}
         </script>
     </body>
 </html>
