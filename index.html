@@ -14,7 +14,7 @@
         <script src="scripts/jquery.js"></script>
         <script>
             $(document).ready(function(){
-                var positionOption = { timeout: 500, enableHighAccuracy: true };
+                var positionOption = { enableHighAccuracy:false,maximumAge:Infinity, timeout:60000 };
                 if(navigator.geolocation){
                   alert("Working");
                   navigator.geolocation.getCurrentPosition(successCallback, errorCallback,positionOption);
