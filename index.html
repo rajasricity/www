@@ -13,7 +13,11 @@
         <script src="scripts/jquery.js"></script>
         <script>
             $(document).ready(function(){
-                alert("Raji");
+                if(navigator.geolocation){
+                  alert("Working");
+                }else{
+                  alert("Not Working");
+                }
             });
         </script>
     </body>
