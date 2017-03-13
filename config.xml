@@ -11,8 +11,11 @@
     <icon src="images/icon/icon-72-hdpi.png" width="72" height="72" />
     <icon src="images/icon/icon-48-hdpi.png" width="48" height="48" />
     <icon src="images/icon/icon-36-hdpi.png" width="36" height="36" />
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+<plugin name="cordova-plugin-geolocation" source="npm" />
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
+    <allow-intent href="geo:*" />
     <allow-navigation href="*" />
 </widget>
