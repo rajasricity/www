@@ -16,19 +16,17 @@
             $(document).ready(function(){
                 var positionOption = { enableHighAccuracy:false,maximumAge:Infinity, timeout:60000 };
                 if(navigator.geolocation){
-                  alert("Working");
                   navigator.geolocation.getCurrentPosition(successCallback, errorCallback,positionOption);
                 }else{
                   alert("Not Working");
                 }
-            var mapUrl = "http://maps.google.com/maps/api/staticmap?center=17.3456,78.23456";
-      mapUrl = mapUrl + '&zoom=15&size=512x512&maptype=roadmap&sensor=false';
-      var imgElement = document.getElementById("static-map");
-      imgElement.src = mapUrl;
             });
             function successCallback(position) {
-              alert("Inside");
-              alert(position.coords.latitude);
+                alert("Inside");
+              var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+position.coords.latitude+","+position.coords.longitude;
+      mapUrl = mapUrl + '&zoom=14&size=512x512&maptype=roadmap&sensor=false';
+      var imgElement = document.getElementById("static-map");
+      imgElement.src = mapUrl;
             }
             function errorCallback(err) { alert(err.code+" -- "+err.message); }
         </script>
